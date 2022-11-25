@@ -24,6 +24,7 @@ namespace RazorPagesEventMaker22.Pages.Events
         public IActionResult OnGet()
         {
             return Page();
+
         }
 
         public IActionResult OnPost()
