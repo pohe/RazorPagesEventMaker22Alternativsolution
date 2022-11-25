@@ -1,0 +1,27 @@
+﻿@page
+@model RazorPagesEventMaker22.Pages.Hotels.IndexModel
+@using RazorPagesEventMaker22.Models
+@{
+    ViewData["Title"] = "Vis hoteller";
+}
+<p>Antal hoteller @Model.Hotels.Count dato @DateTime.Now.ToShortDateString()</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Hotel h in Model.Hotels)
+        {
+            <tr>
+                <td>@h.Id</td>
+                <td>@h.Name</td>
+                <td>@h.Address </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,62 @@
+﻿@page
+@model RazorPagesEventMaker22.Pages.Events.IndexModel
+@using RazorPagesEventMaker22.Interfaces;
+@inject IEventRepository repository;
+@inject ICountryRepository myCountryRepo
+@{
+    ViewData["Title"] = "Index Events";
+}
+
+<h1>List of all events</h1>
+<p>
+    <a asp-page="CreateEvent">Create a new event</a>
+ </p>
+ <div>
+     <ul>
+         <li>There are @repository.GetAllEvents().Count events</li>
+     </ul>
+ </div>
+ @*<form method="post">*@
+<form >@*Default er get*@
+     <p>
+         search: <input type="text" asp-for="FilterCriteria" />
+         <input type="submit" value="Filter" />
+     </p>
+ </form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Descriptuion</th>
+            <th>
+                Country
+            </th>
+            <th>Place</th>
+            <th>DateTime</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.Events)
+        @*@foreach(var item in repository.GetAllEvents())*@
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>
+                    @myCountryRepo.GetCountry(item.CountryCode).Name
+                </td>
+                <td>@item.City</td>
+                <td>@item.DateTime</td>
+                <td><a asp-page="EditEvent" asp-route-id="@item.Id">Edit</a></td>
+                <td><a asp-page="EditEvent" asp-page-handler="Event" asp-route-evname="@item.Name">Edit</a></td>
+                <td><a asp-page="DeleteEvent"  asp-route-id="@item.Id">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+
+
+
+
+</table>
