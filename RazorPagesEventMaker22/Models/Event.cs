@@ -7,6 +7,8 @@ namespace RazorPagesEventMaker22.Models
     {
         public int Id { get; set; }
 
+        public string EventImage { get; set; }
+
         [DisplayName("Landekode")]
         public string CountryCode { get; set; }
 

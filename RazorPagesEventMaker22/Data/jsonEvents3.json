@@ -1,6 +1,7 @@
 [
   {
     "Id": 1,
+    "EventImage": "Roskilde.jfif",
     "CountryCode": "DK",
     "Name": "Tennis",
     "Description": " Malm\u00F8 Marathon runners",
@@ -9,6 +10,7 @@
   },
   {
     "Id": 2,
+    "EventImage": "kagebagning.jfif",
     "CountryCode": "DK",
     "Name": "Kagebagning",
     "Description": "Der bages kager",
@@ -17,6 +19,7 @@
   },
   {
     "Id": 3,
+    "EventImage": "football.jfif",
     "CountryCode": "UK",
     "Name": "Fodbold",
     "Description": "Permier League",
@@ -25,6 +28,7 @@
   },
   {
     "Id": 4,
+    "EventImage": "Marathon.jfif",
     "CountryCode": "GR",
     "Name": " ROm marathon",
     "Description": "L\u00F8b",
@@ -33,10 +37,20 @@
   },
   {
     "Id": 5,
+    "EventImage": "hackaton.jfif",
     "CountryCode": "GR",
     "Name": "Hackaton",
     "Description": "Programmering",
     "City": "Berlin",
     "DateTime": "2022-11-25T09:40:00"
+  },
+  {
+    "Id": 6,
+    "EventImage": "Skak.jfif",
+    "CountryCode": "UK",
+    "Name": "Skak",
+    "Description": "International turnering",
+    "City": "London",
+    "DateTime": "2022-11-28T09:24:00"
   }
 ]

@@ -41,6 +41,9 @@
         @*@foreach(var item in repository.GetAllEvents())*@
         {
             <tr>
+                <td>
+                    <img src="~/images/EventImages/@item.EventImage" class="rounded-circle" width="80" height="70" />
+                </td>
                 <td>@item.Id</td>
                 <td>@item.Name</td>
                 <td>@item.Description</td>
