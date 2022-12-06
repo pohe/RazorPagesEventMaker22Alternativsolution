@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using RazorPagesEventMaker22.Services;
+@inject LogInService LogInService
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -19,21 +21,42 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Countries/CountryIndex">Countries</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Events/Index">Events</a>
-                        </li
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Hotels/Index">Hotels</a>
-                        </li>
+                        @if (LogInService.GetLoggedUser() != null)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Countries/CountryIndex">Countries</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Events/Index">Events</a>
+                            </li
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Hotels/Index">Hotels</a>
+                            </li>
+                        }
+                        
+                       
+                           
+                        @{ if (LogInService.GetLoggedUser() != null)
+                            {
+                                        <li class="nav-item">
+                                            <a class="nav-link text-dark" asp-area="" asp-page="">Logout</a>
+                                        </li>
+                                        <li class="nav-item"  class="float-right" style="font-size: medium">
+                                            @LogInService.GetLoggedUser().Name
+                                        </li>
+                            }        
+                            else 
+                            {                
+                                   
+                                <li class="nav-item">
+                                    <a asp-page="/Users/LogIn" class="float-right btn btn-primary" style="font-size: medium">Log In</a>
+                                </li>
+                            }
+                        }
+                        
                     </ul>
                 </div>
             </div>

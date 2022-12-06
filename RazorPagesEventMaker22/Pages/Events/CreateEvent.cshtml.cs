@@ -10,13 +10,19 @@ namespace RazorPagesEventMaker22.Pages.Events
     {
         private IEventRepository repo;
 
+        private IWebHostEnvironment webHostEnvironment;
+
+        [BindProperty]
+        public IFormFile Photo { get; set; }
+
         [BindProperty]
         public Event Event { get; set; }
 
         public SelectList CountryCodes { get; set; }
-        public CreateEventModel(IEventRepository fakeEventRepository, ICountryRepository cRepo)
+        public CreateEventModel(IEventRepository eventRepository, IWebHostEnvironment webHost, ICountryRepository cRepo)
         {
-            repo = fakeEventRepository;
+            webHostEnvironment = webHost;
+            repo = eventRepository;
             List<Country> countries = cRepo.GetAllCountries();
             CountryCodes = new SelectList(countries, "Code", "Name");
         }
@@ -29,12 +35,38 @@ namespace RazorPagesEventMaker22.Pages.Events
 
         public IActionResult OnPost()
         {
-            if (!ModelState.IsValid)
+            //if (!ModelState.IsValid)
+            //{
+            //    return Page();
+            //}
+            if (Photo != null)
             {
-                return Page();
+                if (Event.EventImage != null)
+                {
+                    string filePath = Path.Combine(webHostEnvironment.WebRootPath, "/images/EventImages", Event.EventImage);
+                    System.IO.File.Delete(filePath);
+                }
+
+                Event.EventImage = ProcessUploadedFile();
             }
             repo.AddEvent(Event);
             return RedirectToPage("Index");
+        }
+
+        private string ProcessUploadedFile()
+        {
+            string uniqueFileName = null;
+            if (Photo != null)
+            {
+                string uploadsFolder = Path.Combine(webHostEnvironment.WebRootPath, "images/EventImages");
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + Photo.FileName;
+                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    Photo.CopyTo(fileStream);
+                }
+            }
+            return uniqueFileName;
         }
     }
 }

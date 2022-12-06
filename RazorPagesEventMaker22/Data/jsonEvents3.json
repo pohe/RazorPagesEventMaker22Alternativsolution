@@ -52,5 +52,23 @@
     "Description": "International turnering",
     "City": "London",
     "DateTime": "2022-11-28T09:24:00"
+  },
+  {
+    "Id": 7,
+    "EventImage": "2fc9d131-72e6-4b8c-b07f-0abc0cf9a66f_Tennis.jfif",
+    "CountryCode": "DK",
+    "Name": "Tennis",
+    "Description": "Kamp",
+    "City": "Hiller\u00F8d",
+    "DateTime": "2022-12-05T11:03:00"
+  },
+  {
+    "Id": 8,
+    "EventImage": "d38cef18-3019-4435-aa1a-ebb4bd29d436_Tennis.jfif",
+    "CountryCode": "DK",
+    "Name": "Maling",
+    "Description": "Der males",
+    "City": "Hiller\u00F8d",
+    "DateTime": "2022-12-05T12:09:00"
   }
 ]
