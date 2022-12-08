@@ -1,4 +1,6 @@
-﻿namespace RazorPagesEventMaker22.Models
+﻿using System.ComponentModel;
+
+namespace RazorPagesEventMaker22.Models
 {
     public class Hotel
     {
@@ -8,10 +10,16 @@
             Name = name;
             Address = address;
         }
+
+        public Hotel()
+        {
+
+        }
         public int Id { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
 
-
+        [DisplayName("Landekode")]
+        public string CountryCode { get; set; }
     }
 }

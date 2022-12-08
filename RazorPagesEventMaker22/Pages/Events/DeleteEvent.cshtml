@@ -19,14 +19,19 @@
                 <input asp-for="@Model.Event.Description" class="form-control" />
             </div>
             <div class="form-group">
+                <label asp-for="@Model.Event.DateTime" class="control-label"></label>
+                <input asp-for="@Model.Event.DateTime" class="form-control" />
+                <span asp-validation-for="Event.DateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="@Model.Event.City" class="control-label"></label>
                 <input asp-for="@Model.Event.City" class="form-control" />
                 <span asp-validation-for="Event.City" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="@Model.Event.DateTime" class="control-label"></label>
-                <input asp-for="@Model.Event.DateTime" class="form-control" />
-                <span asp-validation-for="Event.DateTime" class="text-danger"></span>
+                <label asp-for="@Model.Event.CountryCode" class="control-label"></label>
+                <input asp-for="@Model.Event.CountryCode" class="form-control" />
+                <span asp-validation-for="Event.CountryCode" class="text-danger"></span>
             </div>
             <div class="formgroup">
                 <input type="submit" value="Delete" class="btn btn-primary" />

@@ -1,0 +1,38 @@
+﻿@page
+@model RazorPagesEventMaker22.Pages.Hotels.BookHotelModel
+@{
+    ViewData["Title"] = "Book Hotel";
+}
+<h1>Book hotel</h1>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="@Model.User.Name" class="control-label"></label>
+                <input asp-for="@Model.User.Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <select asp-for="@Model.HotelBooking.HotelId" class="form-control" asp-items="@Model.HotelNames">
+                    <option value="">-- Select hotel---</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.HotelBooking.DateTime" class="control-label"></label>
+                <input asp-for="@Model.HotelBooking.DateTime" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.HotelBooking.NumberOfDays" class="control-label"></label>
+                <input asp-for="@Model.HotelBooking.NumberOfDays" class="form-control" />
+            </div>
+            <div class="formgroup">
+                <input type="submit" value="Create booking" class="btn btn-primary" />
+            </div>
+
+        </form>
+
+
+    </div>
+    <div>
+        <a asp-page="Index">Back to List</a>
+    </div>
+</div>

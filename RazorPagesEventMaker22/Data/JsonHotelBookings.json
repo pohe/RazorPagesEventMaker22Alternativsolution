@@ -1,0 +1,30 @@
+[
+  {
+    "BookingId": 1,
+    "HotelId": 1,
+    "UserID": 1,
+    "DateTime": "2022-11-28T09:24:00",
+    "NumberOfDays": 3
+  },
+  {
+    "BookingId": 2,
+    "HotelId": 2,
+    "UserID": 2,
+    "DateTime": "2022-12-29T09:24:00",
+    "NumberOfDays": 2
+  },
+  {
+    "BookingId": 3,
+    "HotelId": 1,
+    "UserID": 1,
+    "DateTime": "2022-12-15T08:44:00",
+    "NumberOfDays": 3
+  },
+  {
+    "BookingId": 4,
+    "HotelId": 1,
+    "UserID": 1,
+    "DateTime": "2022-12-22T08:52:00",
+    "NumberOfDays": 4
+  }
+]

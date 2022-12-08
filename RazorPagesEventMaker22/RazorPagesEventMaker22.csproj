@@ -7,14 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Pages\Books\Index.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Pages\Books\Index.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="wwwroot\images\EventImages\" />
   </ItemGroup>
 

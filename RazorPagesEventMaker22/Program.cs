@@ -10,6 +10,8 @@ builder.Services.AddTransient<IEventRepository, JsonEventRepository>();
 builder.Services.AddTransient<ICountryRepository, JsonCountryRepository>();
 builder.Services.AddTransient<IHotelRepository, HotelRepository>();
 builder.Services.AddTransient<IUserService, UserService>();
+builder.Services.AddTransient<IHotelRepository, HotelRepository>();
+builder.Services.AddTransient<IHotelBookingRepository, JsonHotelBookingRepository>();
 builder.Services.AddSingleton<LogInService>();
 
 var app = builder.Build();

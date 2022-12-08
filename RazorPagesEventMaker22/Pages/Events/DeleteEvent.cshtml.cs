@@ -24,10 +24,10 @@ namespace RazorPagesEventMaker22.Pages.Events
 
         public IActionResult OnPost()
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
+            //if (!ModelState.IsValid)
+            //{
+            //    return Page();
+            //}
             repo.DeleteEvent(Event);
             return RedirectToPage("Index");
         }

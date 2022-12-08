@@ -1,0 +1,14 @@
+[
+    {
+      "Id": 1,
+      "Name": "SAS hotellet",
+      "Address": "HC. Andersens boulevard",
+      "CountryCode": "DK"
+    },
+    {
+      "Id": 2,
+      "Name": "Tivoli hotellet",
+      "Address": "Kalvebod brygge",
+      "CountryCode": "DK"
+    }
+]
