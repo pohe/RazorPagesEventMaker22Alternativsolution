@@ -28,9 +28,15 @@ namespace RazorPagesEventMaker22.Pages.Hotels
             List<Hotel> Hotels = _hotelRepository.GetAllHotels();
             HotelNames = new SelectList(Hotels, "Id", "Name");
         }
-        public void OnGet()
+        public IActionResult OnGet()
         {
-            User = _logInService.GetLoggedUser();
+            if (_logInService.GetLoggedUser() == null)
+                return RedirectToPage("Users/Login");
+            else
+            {
+                User = _logInService.GetLoggedUser();
+                return Page();
+            }
             
         }
 

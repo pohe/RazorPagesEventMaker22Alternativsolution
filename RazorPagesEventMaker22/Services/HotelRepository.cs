@@ -9,11 +9,27 @@ namespace RazorPagesEventMaker22.Services
     {
         string filePath = @"Data\JsonHotels.json";
 
-        private List<Hotel> _hotels;
        
         public void AddHotel(Hotel ho)
         {
-            throw new NotImplementedException();
+            List<Hotel> hotels = GetAllHotels();
+            List<int> hotelIds = new List<int>();
+
+            foreach (var h in hotels)
+            {
+                hotelIds.Add(h.Id);
+            }
+            if (hotelIds.Count != 0)
+            {
+                int start = hotelIds.Max();
+                ho.Id = start + 1;
+            }
+            else
+            {
+                ho.Id = 1;
+            }
+            hotels.Add(ho);
+            JsonFileWriter.WriteToJsonHotel(hotels, filePath);
         }
 
         public List<Hotel> GetAllHotels()

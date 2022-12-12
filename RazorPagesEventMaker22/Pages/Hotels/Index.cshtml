@@ -4,7 +4,12 @@
 @{
     ViewData["Title"] = "Vis hoteller";
 }
-<p>Antal hoteller @Model.Hotels.Count dato @DateTime.Now.ToShortDateString()</p>
+<p>Antal hoteller @{if (Model.Hotels != null) @Model.Hotels.Count;} dato @DateTime.Now.ToShortDateString()</p>
+
+<p>
+    <a asp-page="CreateHotel">Create a new hotel</a>
+</p>
+<p class="text-danger">@Model.ErrorMessage</p>
 <table class="table">
     <thead>
         <tr>
@@ -15,7 +20,21 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (Hotel h in Model.Hotels)
+        @{ if (Model.Hotels != null)
+            {
+                foreach (Hotel h in Model.Hotels)
+                {
+                    <tr>
+                        <td>@h.Id</td>
+                        <td>@h.Name</td>
+                        <td>@h.Address </td>
+                        <td>@h.CountryCode</td>
+                    </tr>
+                }
+            }
+
+        }
+@*        @foreach (Hotel h in Model.Hotels)
         {
             <tr>
                 <td>@h.Id</td>
@@ -23,7 +42,7 @@
                 <td>@h.Address </td>
                 <td>@h.CountryCode</td>
             </tr>
-        }
+        }*@
     </tbody>
 </table>
 

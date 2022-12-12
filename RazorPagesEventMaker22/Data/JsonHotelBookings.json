@@ -26,5 +26,26 @@
     "UserID": 1,
     "DateTime": "2022-12-22T08:52:00",
     "NumberOfDays": 4
+  },
+  {
+    "BookingId": 5,
+    "HotelId": 2,
+    "UserID": 1,
+    "DateTime": "2022-12-30T12:35:00",
+    "NumberOfDays": 3
+  },
+  {
+    "BookingId": 6,
+    "HotelId": 1,
+    "UserID": 1,
+    "DateTime": "2022-12-25T12:52:00",
+    "NumberOfDays": 5
+  },
+  {
+    "BookingId": 7,
+    "HotelId": 1,
+    "UserID": 1,
+    "DateTime": "2022-12-22T14:14:00",
+    "NumberOfDays": 4
   }
 ]

@@ -70,5 +70,14 @@
     "Description": "Turnering",
     "City": "Roskilde",
     "DateTime": "2022-12-24T13:50:00"
+  },
+  {
+    "Id": 10,
+    "EventImage": "28866b8a-295a-40db-a271-2ff812b18491_padeltennis.jfif",
+    "CountryCode": "DK",
+    "Name": "Padeltennis",
+    "Description": "Turnering",
+    "City": "Roskilde",
+    "DateTime": "2022-12-24T12:32:00"
   }
 ]

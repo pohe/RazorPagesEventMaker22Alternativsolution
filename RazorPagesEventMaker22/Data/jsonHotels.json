@@ -1,14 +1,100 @@
 [
-    {
-      "Id": 1,
-      "Name": "SAS hotellet",
-      "Address": "HC. Andersens boulevard",
-      "CountryCode": "DK"
-    },
-    {
-      "Id": 2,
-      "Name": "Tivoli hotellet",
-      "Address": "Kalvebod brygge",
-      "CountryCode": "DK"
-    }
+  {
+    "Id": 1,
+    "Name": "SAS hotellet",
+    "Address": "HC. Andersens boulevard",
+    "CountryCode": "DK",
+    "Facilities": [
+      "VIP area"
+    ],
+    "Description": null
+  },
+  {
+    "Id": 2,
+    "Name": "Tivoli hotellet",
+    "Address": "Kalvebod brygge",
+    "CountryCode": "DK",
+    "Facilities": [
+      "Swimmingpool",
+      "VIP area"
+    ],
+    "Description": null
+  },
+  {
+    "Id": 3,
+    "Name": "Berlin hotel",
+    "Address": "Berling street",
+    "CountryCode": null,
+    "Facilities": [
+      "Swimmingpool",
+      "VIP area",
+      "Fittness room"
+    ],
+    "Description": null
+  },
+  {
+    "Id": 4,
+    "Name": "London hotel",
+    "Address": "London street",
+    "CountryCode": "UK",
+    "Facilities": [
+      "Swimmingpool",
+      "Restaurant"
+    ],
+    "Description": null
+  },
+  {
+    "Id": 5,
+    "Name": "Scandic Roskilde",
+    "Address": "Magleg\u00E5rdsvej 1",
+    "CountryCode": "DK",
+    "Facilities": [
+      "Swimmingpool",
+      "Restaurant",
+      "Fittness room"
+    ],
+    "Description": "Fint hotel der ligger t\u00E6t p\u00E5 Roskilde centrum og p\u00E5 Roskilde festivalplads"
+  },
+  {
+    "Id": 6,
+    "Name": "Scandic K\u00F8benhavn",
+    "Address": "\u00F8benhavnsvej 123",
+    "CountryCode": "DK",
+    "Facilities": [
+      "Swimmingpool",
+      "Fittness room"
+    ],
+    "Description": "Centralt beliggende billigt hotel"
+  },
+  {
+    "Id": 7,
+    "Name": "Odense kongres hotel",
+    "Address": "Odensevej 123",
+    "CountryCode": "DK",
+    "Facilities": [
+      "Swimmingpool",
+      "Restaurant"
+    ],
+    "Description": "Dejligt hotel mit i Odense centrum og i g\u00E5 afstand til H.C.Andersens hus"
+  },
+  {
+    "Id": 8,
+    "Name": "Scandic Ringsted",
+    "Address": "Ringstedvej 123",
+    "CountryCode": "DK",
+    "Facilities": [
+      "VIP area"
+    ],
+    "Description": "Mange koncerter"
+  },
+  {
+    "Id": 9,
+    "Name": "Scandic \u00C5rhus",
+    "Address": "\u00C5rhusgade123",
+    "CountryCode": "DK",
+    "Facilities": [
+      "Swimmingpool"
+    ],
+    "Description": "sdfsdfsd"
+  }
 ]

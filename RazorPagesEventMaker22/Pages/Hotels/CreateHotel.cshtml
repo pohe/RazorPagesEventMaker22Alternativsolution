@@ -1,0 +1,61 @@
+﻿@page
+@model RazorPagesEventMaker22.Pages.Hotels.CreateHotelModel
+@{
+    ViewData["Title"] = "Create Hotel";
+}
+
+<h1>Create Hotel</h1>
+<div class="row">
+    <div class="col-md-8">
+        <form method="post">
+            <p class="text-danger">@Model.ErrorMessage</p>
+            <div class="form-group">
+                <label asp-for="@Model.Hotel.Name" class="control-label"></label>
+                <input asp-for="@Model.Hotel.Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Hotel.Address" class="control-label"></label>
+                <input asp-for="@Model.Hotel.Address" class="form-control" />
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="@Model.Hotel.CountryCode" class="control-label"></label>
+                <select asp-for="@Model.Hotel.CountryCode" class="form-control" asp-items="@Model.CountryCodes">
+                    <option value="">-- Select country---</option>
+                </select>
+            </div>
+            </br>
+            <label asp-for="@Model.Hotel.CountryCode" class="control-label"></label>
+            </br>
+            @foreach (var country in Model.Countries)
+            {
+                <input type="radio" asp-for="@Model.Hotel.CountryCode" value="@country.Code" />
+                @country.Name
+            }
+            </br> </br>
+            <label asp-for="@Model.Hotel.Facilities" class="control-label"></label>
+            </br>
+            @foreach (var c in Model.Facilities)
+            {
+                <input name="AreChecked" type="checkbox" value="@c" /> @c
+            }
+            </br></br>
+            <div class="form-group">
+                <label class="custom-control-label">Description</label><br />
+                <textarea asp-for="@Model.Hotel.Description" cols="120" class="form-control"></textarea>
+            </div>
+
+            <div class="formgroup">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+
+        </form>
+
+
+    </div>
+    <div>
+        <a asp-page="Index">Back to hotel-list</a>
+    </div>
+</div>
+
+

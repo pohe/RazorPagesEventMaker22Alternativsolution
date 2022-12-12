@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPagesEventMaker22", "RazorPagesEventMaker22\RazorPagesEventMaker22.csproj", "{184B7626-DBF6-43DE-BD0B-C08B1341F030}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRazorEvent", "TestRazorEvent\TestRazorEvent.csproj", "{2CFF1A61-7FEA-4637-AE67-E72B0735648F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{184B7626-DBF6-43DE-BD0B-C08B1341F030}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{184B7626-DBF6-43DE-BD0B-C08B1341F030}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{184B7626-DBF6-43DE-BD0B-C08B1341F030}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CFF1A61-7FEA-4637-AE67-E72B0735648F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CFF1A61-7FEA-4637-AE67-E72B0735648F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CFF1A61-7FEA-4637-AE67-E72B0735648F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CFF1A61-7FEA-4637-AE67-E72B0735648F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
