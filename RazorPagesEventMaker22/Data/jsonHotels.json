@@ -96,5 +96,39 @@
       "Swimmingpool"
     ],
     "Description": "sdfsdfsd"
+  },
+  {
+    "Id": 10,
+    "Name": "Football hotel",
+    "Address": "Football street",
+    "CountryCode": "UK",
+    "Facilities": [
+      "VIP area"
+    ],
+    "Description": "Perfekt hvis du er interesseret for fodbold. Ikke langt fra Wembly stadion. "
+  },
+  {
+    "Id": 11,
+    "Name": "Student hotel",
+    "Address": "Student gade 2",
+    "CountryCode": "SE",
+    "Facilities": [
+      "Swimmingpool",
+      "Restaurant",
+      "Fittness room"
+    ],
+    "Description": "Dette er et godt hotel i Stockholms centrum med gode faciliteter"
+  },
+  {
+    "Id": 12,
+    "Name": "Sejlerhotel",
+    "Address": "S\u00F8vej 2",
+    "CountryCode": "DK",
+    "Facilities": [
+      "Swimmingpool",
+      "VIP area",
+      "Fittness room"
+    ],
+    "Description": "Dette hotel nd\u00E6ldf\u00E6l"
   }
 ]
